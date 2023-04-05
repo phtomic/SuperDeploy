@@ -21,7 +21,7 @@ export class ConsoleController {
         let command = this.fila[0]
         this.fila.shift()
         this.executeCommand(command.command, function (error:any, result:any, errorLog:any) {
-            command.res.send("<br<br><h3>Error<h3>: ".concat(error,"<br><br><br><h3>Result</h3>: <br>",result))
+            command.res.send("<br<br><h3>Error<h3>: ".concat(error,"<br>",errorLog,"<br><br><br><h3>Result</h3>: <br>",result))
             console.log(error,result,errorLog)
         })
         this.filaRunning = this.fila.length>0
