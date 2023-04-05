@@ -1,0 +1,8 @@
+node_modules
+config.js
+*.zip
+
+build
+
+src/app/config/database.ts
+
