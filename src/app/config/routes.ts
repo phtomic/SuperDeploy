@@ -1,5 +1,4 @@
 "use strict";
-import express from "express";
 export class Routes {
     public starts: Array<string> = ["Api"]
     public qrEndpoint = ""
