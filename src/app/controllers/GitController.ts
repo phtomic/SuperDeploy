@@ -13,11 +13,7 @@ export class GitController {
         let commands: Array<string> = [];
         let conf = this.globals.Config.git || false
         if(conf != false){
-            if(Array.isArray(conf.path)){
-
-            }else{
-                commands.push("cd ".concat(conf.path))
-            }
+            commands.push("cd ".concat(req.params.path || conf.path))
             commands.push("git pull");
             this.globals.Controllers.ConsoleController.exec(commands.join(" && "),res)
         }else

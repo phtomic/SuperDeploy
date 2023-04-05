@@ -16,7 +16,7 @@ export class NpmController {
             if(Array.isArray(conf.path)){
 
             }else{
-                commands.push("cd ".concat(conf.path))
+                commands.push("cd ".concat(req.params.path || conf.path))
             }
             commands.push("npm run build");
             this.globals.Controllers.ConsoleController.exec(commands.join(" && "),res)
